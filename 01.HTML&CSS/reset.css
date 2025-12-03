@@ -1,0 +1,207 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegurar que HTML y BODY ocupen toda la pantalla */
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* Quitar estilos de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Quitar puntos de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Imágenes que nunca se desborden */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Quitar borde azul en botones (a veces aparece) */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* SACAR márgenes automáticos del navegador */
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* home */
+header {
+  width: 100%;
+}
+
+.navegador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eeeeee;
+  padding: 30px 20px;
+}
+
+#soyhenry {
+  width: 150px;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+
+nav ul li a:hover {
+    background-color: rgb(188, 188, 188);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+nav ul li a.active {
+  background: black;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 15px;
+}
+
+#mainhome {
+  width: 90%;
+  max-width: 1400px;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+#titulito {
+  background: #ededed;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #555;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+
+#henry {
+  font-size: 85px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+
+#titulo1 {
+  font-size: 85px;
+  font-weight: 800;
+  background: #fffb00;
+  padding: 6px 18px;
+  border-radius: 35px;
+  width: fit-content;
+  margin: 10px 0 25px 0;
+  line-height: 1;
+}
+
+#bajada {
+  font-size: 22px;
+  color: #555;
+  max-width: 350px;
+  line-height: 1.4;
+  margin-top: 20px;
+}
+
+#homepic {
+  width: 550px;
+  border-radius: 20px;
+}
+
+
+/* generador contra */
+
+#tituloprinci{
+    font-size: 35px;
+    margin: 0 0 20px 0;
+    ;
+}
+
+#titulosec{ 
+    font-size: 15px;
+    background-color: #fffb00 ;
+    border-radius: 20px;
+    width: max-content;
+    padding: 0.7em 2em 0.7em 2em ;
+    margin: 4em 3em 4em 3em;
+}
+
+#maincontra{ 
+    min-height: 100vh; 
+    margin: 0;
+  padding: 40px 0;
+    background-color: #f9f9f9;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px
+
+
+}
+
+#formcontra{
+
+    color: #555;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 3em 10em 3em 10em;
+    text-align: center; 
+    margin: 0 auto;
+    margin-bottom: 22px
+  
+    
+
+}
+.preguntas{
+    margin-bottom: 10px
+}
+
+#generar{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-top: 40px;
+}

@@ -3,62 +3,74 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="reset.css">
       <title>Henry Security SAS</title>
    </head>
   <body>
 
-       <header>
+      <header>
+        <div class="navegador">
+          <img id="soyhenry" src="avatar.png" />
 
-         <img src="avatar.png" />
 
-          <nav>
-              <ul>
-                  <li><a href="index.html"> Home </a></li>
-                  <li><a href="generarcontrasena.html"> Generar contraseña</a> </li>
-                  <li><a href="cajafuerte.html"> Caja Fuerte</a></li>
-                  <li><a href="monitoreodeactividad.html"> Monitoreo de actividad</a></li>
-                  <li><a href="gestiondeusuarios.html"> Gestión de usuarios</a></li>
+           <nav>
+               <ul>
+                   <li><a  class="active" href="index.html"> Home </a></li>
+                   <li><a   href="generarcontrasena.html"> Generar contraseña</a> </li>
+                   <li><a   href="cajafuerte.html"> Caja Fuerte</a></li>
+                   <li><a  href="monitoreodeactividad.html"> Monitoreo de actividad</a></li>
+                   <li><a  href="gestiondeusuarios.html"> Gestión de usuarios</a></li>
               </ul>
-          </nav>
-
+           </nav>
+        </div>
 
        </header>
 
         <main>
-            <h2>Asistente de Seguridad</h2>
-            <div> <p>Generador de contraseñas para usuarios:</p></div>
+            <div id="maincontra">
+                     <div>
+                          <h2 id="tituloprinci">Asistente de Seguridad</h2>
+                     </div>
 
-           <div>
-             <form> 
-                <div>
-                    <label for="Cantidad de caracteres deseados">Cantidad de caracteres deseados</label>
-                    <input type="number" name="Cantidad de caracteres deseados"/>
-                </div>
+                  <div> <p id="titulosec">Generador de contraseñas para usuarios:</p>
+                
+                  </div>
 
-                <div>
-                    <label for="Incluir caracteres especiales">Incluir caracteres especiales?</label>
-                    <input type="text" name="Incluir caracteres especiales"/>
-                </div>
+              <div id="formcontra">
+                <form> 
+                   <div class="preguntas">
+                         <label for="Cantidad de caracteres deseados">Cantidad de caracteres deseados</label>
+                        <input type="number" name="Cantidad de caracteres deseados"/>
+                   </div>
 
-                <div>
-                    <label for="Incluir caracteres numericos">Incluir caracteres numericos?</label>
-                    <input type="text" name="Incluir caracteres numericos"/>
+                  <div class="preguntas">
+                       <label for="Incluir caracteres especiales">Incluir caracteres especiales?</label>
+                     <input type="text" name="Incluir caracteres especiales"/>
+                   </div>
+
+                   <div class="preguntas">
+                       <label for="Incluir caracteres numericos">Incluir caracteres numericos?</label>
+                       <input type="text" name="Incluir caracteres numericos"/>
             
-                </div>
+                   </div>
 
-                <div>
-                   <label for="Incluir mayusculas">Incluir mayusculas?</label>
-                   <input type="text" name="Incluir mayusculas"/>
-                </div>
+                    <div class="preguntas">
+                      <label for="Incluir mayusculas">Incluir mayusculas?</label>
+                      <input type="text" name="Incluir mayusculas"/>
+                   </div>
               
-                <button>Generar contraseña</button>
+                <button id="generar">Generar contraseña</button>
+
+            </div>
 
 
              </form>
+
+
+
+
+
             </div>
-
-        
-
 
         </main>
    </body>
