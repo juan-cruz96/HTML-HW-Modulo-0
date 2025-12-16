@@ -1,40 +1,46 @@
 function checkLongitud(longitud) {
   /* TU CODIGO */
+  return longitud >= 3;
 
 }
 
 function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
   /* TU CODIGO */
-  var letras = null;
+  var letras = "abcdefghijklmnopqrstuvwxyz";
 
-  var numeros = null;
+  var numeros = "0123456789";
 
-  var especiales = null;
+  var especiales = "!@#$%^&*";
 
-  var letrasMayusculas = null
+  var letrasMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  var caracteresDisponibles = null;
-
-  if () {
-      
+  var caracteresDisponibles = letras;
+  
+  if (incluirEspeciales) {
+    caracteresDisponibles += especiales;
   }
 
-  if () {
-      
+  if (incluirNumeros) {
+    caracteresDisponibles += numeros;
   }
 
-  if () {
-      
-
+  if (incluirMayusculas) {
+    caracteresDisponibles += letrasMayusculas
   }
 
-  var contrasena = null;
+  var contrasena = "";
 
-  if () {
-
+  if (checkLongitud (longitud)) {
+    for ( var i = 0 ; i < longitud ; i++){
+      var random = Math.random ();
+      var multiplicado = random * caracteresDisponibles.length;
+      var indice = Math.floor (multiplicado);
+      var caracter = caracteresDisponibles[indice];
+      contrasena += caracter;
+    }
   }
 
-  return null;
+  return "Contraseña generada: " + contrasena;
 }
 
 // <------- NO TOCAR -------->

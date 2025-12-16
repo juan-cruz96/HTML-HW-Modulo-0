@@ -1,21 +1,71 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../02. JS Bases/generadorContrasenas.js":
+/***/ "../02. JS Bases/generadorContrasenas.js"
 /*!***********************************************!*\
   !*** ../02. JS Bases/generadorContrasenas.js ***!
   \***********************************************/
-/***/ (() => {
+(module) {
 
-throw new Error("Module parse failed: Unexpected token (18:6)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n|   var caracteresDisponibles = null;\n| \n>   if () {\n|       \n|   }");
+function checkLongitud(longitud) {
+  /* TU CODIGO */
+  return longitud >= 3;
 
-/***/ }),
+}
 
-/***/ "../03. JS Bucles/cajaFuerte.js":
+function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
+  /* TU CODIGO */
+  var letras = "abcdefghijklmnopqrstuvwxyz";
+
+  var numeros = "0123456789";
+
+  var especiales = "!@#$%^&*";
+
+  var letrasMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  var caracteresDisponibles = letras;
+  
+  if (incluirEspeciales) {
+    caracteresDisponibles += especiales;
+  }
+
+  if (incluirNumeros) {
+    caracteresDisponibles += numeros;
+  }
+
+  if (incluirMayusculas) {
+    caracteresDisponibles += letrasMayusculas
+  }
+
+  var contrasena = "";
+
+  if (checkLongitud (longitud)) {
+    for ( var i = 0 ; i < longitud ; i++){
+      var random = Math.random ();
+      var multiplicado = random * caracteresDisponibles.length;
+      var indice = Math.floor (multiplicado);
+      var caracter = caracteresDisponibles[indice];
+      contrasena += caracter;
+    }
+  }
+
+  return "Contraseña generada: " + contrasena;
+}
+
+// <------- NO TOCAR -------->
+module.exports = {
+  checkLongitud,
+  generarContrasena,
+};
+
+
+/***/ },
+
+/***/ "../03. JS Bucles/cajaFuerte.js"
 /*!**************************************!*\
   !*** ../03. JS Bucles/cajaFuerte.js ***!
   \**************************************/
-/***/ ((module) => {
+(module) {
 
 function cajaFuerte(codigoSecreto, cantidadIntentos){
   /* TU CODIGO */
@@ -42,13 +92,13 @@ module.exports = {
   validarNumerosRepetidos
 }
 
-/***/ }),
+/***/ },
 
-/***/ "../04. JS Arrays/monitoreoActividad.js":
+/***/ "../04. JS Arrays/monitoreoActividad.js"
 /*!**********************************************!*\
   !*** ../04. JS Arrays/monitoreoActividad.js ***!
   \**********************************************/
-/***/ ((module) => {
+(module) {
 
 // <------- Arreglo de actividades sospechozas -----> modificar el valor de ser necesario
 var actividadesSospechozas = null
@@ -86,13 +136,13 @@ module.exports = {
 
 
 
-/***/ }),
+/***/ },
 
-/***/ "../05. JS Objetos/gestionUsuarios.js":
+/***/ "../05. JS Objetos/gestionUsuarios.js"
 /*!********************************************!*\
   !*** ../05. JS Objetos/gestionUsuarios.js ***!
   \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+(module, __unused_webpack_exports, __webpack_require__) {
 
 // <----- NO TOCAR ------->
 const { perfiles } = __webpack_require__(/*! ../build/js/perfiles.js */ "./js/perfiles.js")
@@ -126,13 +176,13 @@ module.exports = {
 
 
 
-/***/ }),
+/***/ },
 
-/***/ "./js/cajaFuerteDOM.js":
+/***/ "./js/cajaFuerteDOM.js"
 /*!*****************************!*\
   !*** ./js/cajaFuerteDOM.js ***!
   \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+(module, __unused_webpack_exports, __webpack_require__) {
 
 const { cajaFuerte,desbloquearCajaFuerte,validarNumerosRepetidos} = __webpack_require__(/*! ../../03. JS Bucles/cajaFuerte.js */ "../03. JS Bucles/cajaFuerte.js")
 
@@ -203,13 +253,13 @@ module.exports = {
   cajaFuerteDOM
 }
 
-/***/ }),
+/***/ },
 
-/***/ "./js/genContrasenasDOM.js":
+/***/ "./js/genContrasenasDOM.js"
 /*!*********************************!*\
   !*** ./js/genContrasenasDOM.js ***!
   \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+(module, __unused_webpack_exports, __webpack_require__) {
 
 const {checkLongitud , generarContrasena } = __webpack_require__(/*! ../../02. JS Bases/generadorContrasenas.js */ "../02. JS Bases/generadorContrasenas.js")
 
@@ -239,13 +289,13 @@ module.exports = {
   passGenDOM
 }
 
-/***/ }),
+/***/ },
 
-/***/ "./js/gestionUsuariosDOM.js":
+/***/ "./js/gestionUsuariosDOM.js"
 /*!**********************************!*\
   !*** ./js/gestionUsuariosDOM.js ***!
   \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+(module, __unused_webpack_exports, __webpack_require__) {
 
 const { asistente } = __webpack_require__(/*! ../../05. JS Objetos/gestionUsuarios.js */ "../05. JS Objetos/gestionUsuarios.js")
 
@@ -334,13 +384,13 @@ module.exports = {
     gestionUsuariosDOM 
 }
 
-/***/ }),
+/***/ },
 
-/***/ "./js/monitoreoActividadDOM.js":
+/***/ "./js/monitoreoActividadDOM.js"
 /*!*************************************!*\
   !*** ./js/monitoreoActividadDOM.js ***!
   \*************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+(module, __unused_webpack_exports, __webpack_require__) {
 
 const { agregarActividad, eliminarActividad, filtrarActividadesPorRiesgo, generarReporteDeActividades } = __webpack_require__(/*! ../../04. JS Arrays/monitoreoActividad.js */ "../04. JS Arrays/monitoreoActividad.js")
 
@@ -414,13 +464,13 @@ module.exports = {
     monitoreoActividadDOM 
 }
 
-/***/ }),
+/***/ },
 
-/***/ "./js/perfiles.js":
+/***/ "./js/perfiles.js"
 /*!************************!*\
   !*** ./js/perfiles.js ***!
   \************************/
-/***/ ((module) => {
+(module) {
 
 var perfiles = [
   { usuario: "Alice", codigo: 1234, nivel_de_autorizacion: "bajo", antiguedad: 12 },
@@ -444,7 +494,7 @@ module.exports = {
   perfiles
 }
 
-/***/ })
+/***/ }
 
 /******/ 	});
 /************************************************************************/
@@ -457,6 +507,12 @@ module.exports = {
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Check if module exists (development only)
+/******/ 		if (__webpack_modules__[moduleId] === undefined) {
+/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
