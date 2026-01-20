@@ -3,31 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../01.HTML&CSS/reset.css">
+  <link rel="stylesheet" href="../01.HTML&CSS/style.css">
+
   <title>Proyecto M0</title>
 </head>
 <body>
     <header>
-        <nav>
-            <img src="../build/assets/img/Group 48095749.svg" alt="Hen-logo">
-            <ul>
-                <li> <a href="index.html">Home</a> </li>
-                <li> <a href="../build/html/generarContrasena.html">Generar Contrasena</a></li>
-                <li> <a href="../build/html/cajaFuerte.html">Caja fuerte</a></li>
-                <li> <a href="../build/html/monitoreoActividad.html">Monitoreo de actividad</a></li>
-                <li> <a href="../build/html/gestionUsuarios.html">Gestion de usuarios</a></li>
+             <div class="logo">
+              <img src="../01.HTML&CSS/assets/img/Group 48095749.svg" alt="Hen-logo">
+             </div> 
+
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li> <a class= "items" href="index.html" class="navActual">Home</a> </li>
+                <li> <a class= "items" href="../build/html/generarContrasena.html" class="navLink">Generar Contrasena</a></li>
+                <li> <a class= "items" href="../build/html/cajaFuerte.html" class="navLink">Caja fuerte</a></li>
+                <li> <a class= "items" href="../build/html/monitoreoActividad.html" class="navLink">Monitoreo de actividad</a></li>
+                <li> <a class= "items" href="../build/html/gestionUsuarios.html" class="navLink">Gestion de usuarios</a></li>
             </ul>
 
         </nav>
 
     </header>
     <section>
-        <article>
-            <span>Seguridad personalizada</span>
-            <h1>Henry <br> Security SAS</h1>
-            <p>Protegemos tus datos, impulsamos tu confianza</p>
+        <article class="texto">
+            <p id="pillgris" >Seguridad personalizada y efectiva</p><br><br><br><br>
+            <h1>
+               <span class="title">Henry</span>
+               <span id="pill">Security SAS</span>
+            </h1>
+            <p id="partedeabajo">Protegemos tus datos, impulsamos<br> tu confianza.</p>
         </article>
-        <article> <img src="../build/assets/img/Escritorio edit_pared clean 1 (1).png" alt="security"></article>
+
+        <article> <img id="imagen" src="../01.HTML&CSS/assets/img/Escritorio edit_pared clean 1 (1).png" alt="security"></article>
     </section>
 
 </body>
 </html>
+
+

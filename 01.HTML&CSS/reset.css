@@ -1,0 +1,96 @@
+/* ================================
+   CSS RESET — FULL / AGGRESSIVE
+   ================================ */
+
+/* Reset box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset all elements */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+/* HTML & Body */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Reset typography */
+body {
+  font-family: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+
+/* Reset headings */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Reset paragraphs */
+p {
+  font-size: inherit;
+}
+
+/* Reset lists */
+ul, ol, li {
+  list-style: none;
+}
+
+/* Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset images & media */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset buttons */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* Reset form elements */
+input,
+textarea,
+select {
+  all: unset;
+  box-sizing: border-box;
+}
+
+/* Reset tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset quotes */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}

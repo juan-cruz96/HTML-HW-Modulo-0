@@ -1,0 +1,169 @@
+
+
+:root{
+    --color-general-fuente:#222222 ;
+    --color-gris-fuente: #676767;
+    --color-amarillo-pill:#FFFF00;
+    --color-nav-bg:#F1F1F1;
+    --color-blanco-fuente:#FFFFFF;
+
+    --maxwidth: 100vw;
+    --fuente-small: 1rem;
+    --fuente-regular: 1.875rem;
+    --fuente-titulo: 5.625rem;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(../01.HTML&CSS/assets/fonts/Satoshi-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../01.HTML&CSS/assets/fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: medium;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../01.HTML&CSS/assets/fonts/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: black;
+  font-display: swap;
+}
+
+
+
+
+
+body{
+    
+    
+    width: 100%;
+    max-width: var(--maxwidth);
+}
+
+header{
+    background-color: #F1F1F1;
+    color: #222222;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header img{
+    margin-left: 65px;
+
+}
+
+header nav{
+    width: 888px;
+    margin-right: 69px;
+
+}
+
+header nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+header nav ul li .items{
+    font-size: var(--fuente-small);
+    font-weight: 500;
+    border-radius: 9px;
+    padding: 4px 16px 5px 16px;
+    font-family: "Poppins", sans-serif;
+
+
+}
+
+
+
+header nav ul li .items:hover,
+header nav ul li .items:focus{
+    background-color: #222222;
+    color: var(--color-blanco-fuente);
+    font-weight: 600;
+}
+
+section {
+  display: flex;
+  
+  justify-content: space-between;
+  gap: 40px;
+
+  max-width: 1166px;
+  height: 590px;
+
+  margin: 197px auto;
+  padding: 0 40px;
+}
+
+#pillgris {
+  background-color: var(--color-nav-bg);
+  width: 324px;
+  padding: 15px 17px 15px 21px;
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 23px;
+  
+}
+section article .texto{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+h1{
+    font-family: "Satochi", sans-serif;
+    font-weight: 900;
+    font-size: 90px;
+    color: #222222;
+    
+    
+
+
+}
+
+h1 .title {
+  display: block;       
+  margin-bottom: 18px;  
+}
+
+#pill{
+  
+  background-color: #FFF700;
+  border-radius: 999px;
+
+  width: 608px;
+  height: 117px;
+  
+  padding-bottom: 10px; 
+  display: flex;
+  align-items: center;      
+  justify-content: center;  
+}
+
+#partedeabajo{
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    font-weight: 400;
+    color: #676767;
+    letter-spacing: 0.5%;
+    padding-top: 35px;
+}
